@@ -1,16 +1,19 @@
 <script>
-    //Problema: Procurar letra
-    //Peça para o usuário digitar UMA palavra.
-    //Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
+    // Problema: Procurar letra
+    // Peça para o usuário digitar UMA palavra.
+    let palavra = prompt("Digite uma palavra:");
+    let letra = prompt("Digite a letra que deseja encontrar na palavra:");
+    if (palavra && letra && letra.length === 1) {
+        
+        let posicao = palavra.toLowerCase().indexOf(letra.toLowerCase());
 
-    //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
-
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+        if (posicao !== -1) {
+            alert(`A letra ${letra} na palavra.`);
+            alert(`A primeira posição da letra ${letra} na palavra é: ${posicao}`);
+        } else {
+            alert(`A letra ${letra} não foi encontrada na palavra.`);
+        }
+    } else {
+        alert("Por favor, forneça uma palavra e uma única letra.");
+    }
 </script>
